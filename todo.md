@@ -1,4 +1,2 @@
-- [x] Examine ModuleView.tsx to understand the TypeError
-- [x] Check how selectedTopic is defined and passed to the component
-- [x] Fix the undefined check for selectedTopic.title
-- [x] Test the fix to ensure the error is resolved
+- [x] Fixed TypeError in ModuleView.tsx
+- [x] Resolved Vercel deployment warnings (module type detection)

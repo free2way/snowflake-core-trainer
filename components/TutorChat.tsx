@@ -4,6 +4,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Message } from '@/lib/types';
 import { MessageSquare, Send, X, Bot, User } from 'lucide-react';
 import MarkdownRenderer from './MarkdownRenderer';
+import ErrorDisplay from './ErrorDisplay';
+import LoadingSpinner from './LoadingSpinner';
+import RetryButton from './RetryButton';
 
 const TutorChat: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +15,8 @@ const TutorChat: React.FC = () => {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [retryCount, setRetryCount] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -29,6 +34,7 @@ const TutorChat: React.FC = () => {
     setMessages(prev => [...prev, userMsg]);
     setInput('');
     setLoading(true);
+    setError(null);
 
     const history = messages.map(m => ({
         role: m.role === 'model' ? 'model' : 'user',
@@ -51,23 +57,25 @@ const TutorChat: React.FC = () => {
       
       if (data.success) {
         setMessages(prev => [...prev, { role: 'model', text: data.response, timestamp: Date.now() }]);
+        setRetryCount(0);
       } else {
-        setMessages(prev => [...prev, { 
-          role: 'model', 
-          text: "I'm having trouble connecting to the AI service. Please check your configuration.", 
-          timestamp: Date.now() 
-        }]);
+        const errorMsg = data.error || "I'm having trouble connecting to the AI service. Please check your configuration.";
+        setError(errorMsg);
+        setRetryCount(prev => prev + 1);
       }
     } catch (error) {
       console.error('Chat error:', error);
-      setMessages(prev => [...prev, { 
-        role: 'model', 
-        text: "I'm having trouble connecting right now.", 
-        timestamp: Date.now() 
-      }]);
+      const errorMsg = error instanceof Error ? error.message : "I'm having trouble connecting right now.";
+      setError(errorMsg);
+      setRetryCount(prev => prev + 1);
     }
     
     setLoading(false);
+  };
+
+  const handleRetry = () => {
+    setError(null);
+    handleSend();
   };
 
   if (!isOpen) {
@@ -117,15 +125,35 @@ const TutorChat: React.FC = () => {
         ))}
         {loading && (
           <div className="flex justify-start gap-2">
-             <div className="w-8 h-8 rounded-full bg-snow-100 flex items-center justify-center flex-shrink-0 border border-snow-200">
-                <Bot size={14} className="text-snow-600" />
+            <div className="w-8 h-8 rounded-full bg-snow-100 flex items-center justify-center flex-shrink-0 border border-snow-200">
+              <Bot size={14} className="text-snow-600" />
             </div>
             <div className="bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
-                <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                    <div className="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                    <div className="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-                </div>
+              <LoadingSpinner size="sm" text="Thinking..." />
+            </div>
+          </div>
+        )}
+        
+        {error && (
+          <div className="flex justify-start gap-2">
+            <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 border border-red-200">
+              <Bot size={14} className="text-red-600" />
+            </div>
+            <div className="bg-white rounded-lg border border-slate-200 shadow-sm">
+              <ErrorDisplay 
+                error={error} 
+                type="auth"
+                retry={handleRetry}
+                className="max-w-[250px]"
+              />
+              <RetryButton 
+                onRetry={handleRetry}
+                loading={loading}
+                maxRetries={3}
+                retryCount={retryCount}
+                error={error}
+                className="m-3"
+              />
             </div>
           </div>
         )}
