@@ -1,10 +1,4 @@
-- [x] 分析当前项目结构和依赖
-- [x] 查看 Gemini API 调用实现
-- [x] 设计 Next.js 项目架构
-- [x] 创建 Next.js 项目结构
-- [x] 迁移前端组件到 Next.js
-- [x] 创建 API 路由处理 Gemini 调用
-- [x] 安全的 API 密钥管理
-- [x] 测试前后端集成
-- [x] 验证 API 密钥安全性
-- [x] 清理旧文件并完成迁移
+- [x] Examine ModuleView.tsx to understand the TypeError
+- [x] Check how selectedTopic is defined and passed to the component
+- [x] Fix the undefined check for selectedTopic.title
+- [x] Test the fix to ensure the error is resolved

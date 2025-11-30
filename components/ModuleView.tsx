@@ -15,7 +15,59 @@ const ModuleView: React.FC<ModuleViewProps> = ({ module }) => {
   const [loadingExplanations, setLoadingExplanations] = useState<Record<string, boolean>>({});
   const [showAIExplanation, setShowAIExplanation] = useState<Record<string, boolean>>({});
 
-  const selectedTopic = module.topics.find(t => t.id === selectedTopicId)!;
+  const selectedTopic = module.topics.find(t => t.id === selectedTopicId);
+  
+  // Handle case where no topic is found
+  if (!selectedTopic) {
+    return (
+      <div className="flex h-full gap-6">
+        <div className="w-80 bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+          <div className="p-4 bg-slate-50 border-b border-slate-200">
+            <h3 className="font-semibold text-slate-800">Topics</h3>
+            <p className="text-sm text-slate-500">{module.topics.length} topics</p>
+          </div>
+          
+          <div className="flex-1 overflow-y-auto">
+            {module.topics.length === 0 ? (
+              <div className="p-4 text-center text-slate-500">
+                No topics available
+              </div>
+            ) : (
+              module.topics.map((topic) => (
+                <button
+                  key={topic.id}
+                  onClick={() => setSelectedTopicId(topic.id)}
+                  className={`w-full text-left p-4 border-b border-slate-100 hover:bg-slate-50 transition-colors ${
+                    selectedTopicId === topic.id ? 'bg-slate-50 border-l-4 border-l-snow-500' : ''
+                  }`}
+                >
+                  <div className="font-medium text-slate-800">{topic.title}</div>
+                  <div className="text-sm text-slate-500 mt-1">{topic.description}</div>
+                </button>
+              ))
+            )}
+          </div>
+        </div>
+
+        <div className="flex-1 bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+          <div className="p-6 border-b border-slate-200">
+            <div className="flex justify-between items-start">
+              <div>
+                <h2 className="text-2xl font-bold text-slate-800">No Topic Selected</h2>
+                <p className="text-slate-600 mt-1">Please select a topic from the left to begin learning.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-6 overflow-y-auto max-h-[calc(100vh-280px)]">
+            <div className="text-center text-slate-500 py-12">
+              Select a topic to view its content
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const generateExplanation = async (topicTitle: string, topicId: string) => {
     setLoadingExplanations(prev => ({ ...prev, [topicId]: true }));
