@@ -13,6 +13,8 @@ dist
 dist-ssr
 *.local
 *.tsbuildinfo
+tmp/
+SnowPro Core COF-C03_en_with_discussion.pdf
 
 # Editor directories and files
 .vscode/*

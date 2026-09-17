@@ -3,11 +3,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
   ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, ChevronRight, Circle,
-  Clock3, Code2, Copy, Gauge, LayoutDashboard, LogOut, Menu, RotateCcw,
-  Snowflake, Target, X, XCircle,
+  Clock3, Code2, Copy, ExternalLink, FlaskConical, Gauge, LayoutDashboard, Library,
+  LogOut, Menu, RotateCcw, Snowflake, Target, X, XCircle,
 } from 'lucide-react';
 import { DOMAINS, EXAM_META, QUIZ_QUESTIONS, TOTAL_TOPICS } from '@/lib/content';
 import type { Domain, Topic, ViewMode } from '@/lib/types';
+import QuestionBankView from '@/components/QuestionBankView';
+import TopicLab from '@/components/TopicLab';
 
 export default function ExamApp() {
   const [view, setView] = useState<ViewMode>('plan');
@@ -72,6 +74,9 @@ export default function ExamApp() {
           <button className={view === 'quiz' ? 'nav-item active' : 'nav-item'} onClick={() => { setView('quiz'); setNavOpen(false); }}>
             <Target size={17} /><span>全域模拟</span><em>10</em>
           </button>
+          <button className={view === 'bank' ? 'nav-item active' : 'nav-item'} onClick={() => { setView('bank'); setNavOpen(false); }}>
+            <Library size={17} /><span>模拟题库</span><em>116</em>
+          </button>
 
           <p className="nav-label domain-label">考试域</p>
           {DOMAINS.map((domain) => {
@@ -103,7 +108,7 @@ export default function ExamApp() {
           <button className="icon-button menu-button" onClick={() => setNavOpen(true)} aria-label="打开导航"><Menu size={20} /></button>
           <div className="breadcrumb">
             <span>SNOWPRO CORE</span><ChevronRight size={14} />
-            <strong>{view === 'plan' ? '学习总览' : view === 'quiz' ? '全域模拟' : activeDomain.shortTitle}</strong>
+            <strong>{view === 'plan' ? '学习总览' : view === 'quiz' ? '全域模拟' : view === 'bank' ? '模拟题库' : activeDomain.shortTitle}</strong>
           </div>
           <div className="topbar-meta"><span className="status-dot" /> 内容基于 COF-C03</div>
           <div className="avatar" title="admin">AD</div>
@@ -117,6 +122,7 @@ export default function ExamApp() {
           if (next) setActiveTopicId(next.id);
         }} />}
         {view === 'quiz' && <QuizView />}
+        {view === 'bank' && <QuestionBankView />}
       </main>
     </div>
   );
@@ -185,8 +191,11 @@ function PlanView({ completed, progress, onSelect, onStartQuiz }: { completed: s
 
 function LearnView({ domain, topic, completed, onSelectTopic, onToggleComplete, onMove }: { domain: Domain; topic: Topic; completed: string[]; onSelectTopic: (topic: Topic) => void; onToggleComplete: () => void; onMove: (direction: number) => void }) {
   const [copied, setCopied] = useState(false);
+  const [lessonMode, setLessonMode] = useState<'content' | 'lab'>('content');
   const index = domain.topics.findIndex((item) => item.id === topic.id);
   const isDone = completed.includes(topic.id);
+
+  useEffect(() => setLessonMode('content'), [topic.id]);
 
   async function copySql() {
     if (!topic.practice) return;
@@ -221,6 +230,12 @@ function LearnView({ domain, topic, completed, onSelectTopic, onToggleComplete, 
             <div className="lesson-time"><Clock3 size={15} /> 约 {topic.minutes} 分钟</div>
           </div>
 
+          <div className="lesson-tabs" role="tablist" aria-label="知识讲解与实验">
+            <button role="tab" aria-selected={lessonMode === 'content'} className={lessonMode === 'content' ? 'active' : ''} onClick={() => setLessonMode('content')}><BookOpen size={16} /> 详细讲解</button>
+            <button role="tab" aria-selected={lessonMode === 'lab'} className={lessonMode === 'lab' ? 'active' : ''} onClick={() => setLessonMode('lab')}><FlaskConical size={16} /> Lab 实验</button>
+          </div>
+
+          {lessonMode === 'content' ? <>
           <section className="lesson-section">
             <div className="lesson-section-label"><span>01</span><b>学习目标</b></div>
             <div className="objective-list">
@@ -237,10 +252,18 @@ function LearnView({ domain, topic, completed, onSelectTopic, onToggleComplete, 
 
           <section className="trap-note"><span>易错辨析</span><p>{topic.trap}</p></section>
 
+          {topic.detailSections?.map((section, sectionIndex) => <section className="lesson-section deep-dive" key={section.title}>
+            <div className="lesson-section-label"><span>{String(sectionIndex + 3).padStart(2, '0')}</span><b>深度讲解</b></div>
+            <div className="deep-dive-copy"><h3>{section.title}</h3><p>{section.body}</p>{section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}</div>
+          </section>)}
+
           {topic.practice && <section className="code-lab">
             <div><span><Code2 size={16} /> HANDS-ON</span><h3>{topic.practice.title}</h3><button onClick={copySql}><Copy size={15} /> {copied ? '已复制' : '复制 SQL'}</button></div>
             <pre><code>{topic.practice.sql}</code></pre><p>{topic.practice.note}</p>
           </section>}
+
+          {topic.officialLinks?.length ? <section className="official-links"><div><span>OFFICIAL REFERENCE</span><h3>延伸阅读</h3></div>{topic.officialLinks.map((link) => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.title}<ExternalLink size={14} /></a>)}</section> : null}
+          </> : topic.lab ? <TopicLab topicId={topic.id} lab={topic.lab} /> : <div className="lab-unavailable">此知识点的实验正在整理。</div>}
 
           <div className="lesson-actions">
             <button className="secondary-button" disabled={index === 0} onClick={() => onMove(-1)}><ArrowLeft size={16} /> 上一单元</button>

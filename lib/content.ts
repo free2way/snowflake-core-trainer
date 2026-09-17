@@ -1,5 +1,6 @@
 import { Bot, Cable, Gauge, Network, ShieldCheck } from 'lucide-react';
 import type { Domain, QuizQuestion } from './types';
+import { TOPIC_DETAILS } from './topic-details';
 
 export const EXAM_META = {
   code: 'COF-C03',
@@ -9,7 +10,7 @@ export const EXAM_META = {
   updated: '2026.09',
 };
 
-export const DOMAINS: Domain[] = [
+const BASE_DOMAINS: Domain[] = [
   {
     id: 'architecture', number: '01', shortTitle: '架构与 AI', weight: 31, icon: Network,
     title: 'Snowflake AI Data Cloud 功能与架构',
@@ -188,6 +189,11 @@ export const DOMAINS: Domain[] = [
     ],
   },
 ];
+
+export const DOMAINS: Domain[] = BASE_DOMAINS.map((domain) => ({
+  ...domain,
+  topics: domain.topics.map((topic) => ({ ...topic, ...TOPIC_DETAILS[topic.id] })),
+}));
 
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   { id: 'q1', domainId: 'architecture', prompt: '某团队的单条大型查询频繁发生 remote spill。第一步最合理的操作是什么？', options: ['启用多集群仓库', '查看 Query Profile，并评估放大仓库或减少中间数据', '增加 Time Travel 保留期', '创建 Reader Account'], answer: 1, explanation: 'Remote spill 表示中间数据超出本地内存/磁盘能力。先看 Profile 定位算子，再考虑 scale up 或 SQL 优化；多集群主要解决并发排队。', reference: 'Performance / Query Profile' },

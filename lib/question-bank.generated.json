@@ -1,0 +1,2496 @@
+[
+  {
+    "id": "pdf-1",
+    "number": 1,
+    "sourcePage": 2,
+    "domainId": "architecture",
+    "prompt": "What is a key difference between the Snowflake CLI and SnowSQL?",
+    "options": [
+      "SnowSQL is used for managing workloads and applications, while Snowflake CLI executes queries.",
+      "Snowflake CLI is primarily used for managing workloads and applications, while SnowSQL is used for executing operations.",
+      "SnowSQL supports only Data Definition Language (DDL) operations, while Snowflake CLI supports only Data Manipulation Language (DML) operations.",
+      "Snowflake CLI only supports query execution, while SnowSQL manages Python packages."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Snowflake CLI is primarily used for managing workloads and applications, while SnowSQL is used for executing operations.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-2",
+    "number": 2,
+    "sourcePage": 3,
+    "domainId": "architecture",
+    "prompt": "Which services are handled within the Cloud Services layer? (Choose two.)",
+    "options": [
+      "Authentication",
+      "Query processing",
+      "Secure socket",
+      "Virtual warehouse hosting",
+      "Metadata management"
+    ],
+    "correctAnswers": [
+      0,
+      4
+    ],
+    "answerLabels": [
+      "A",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, E：A. Authentication；E. Metadata management。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-3",
+    "number": 3,
+    "sourcePage": 4,
+    "domainId": "architecture",
+    "prompt": "A user is automating a data pipeline using the Snowflake CLI and needs to pass variables into SQL scripts. Which variable templating syntaxes should be used? (Choose two.)",
+    "options": [
+      "STANDARD",
+      "LEGACY",
+      "JINJA",
+      "NONE",
+      "ALL"
+    ],
+    "correctAnswers": [
+      1,
+      2
+    ],
+    "answerLabels": [
+      "B",
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 B, C：B. LEGACY；C. JINJA。讨论区解析：two oﬃcially supported variable templating syntaxes in the Snowflake CLI:Legacy: &variableJINJA: {{ variable }}There is no templating syntax called STANDARD in the Snowflake CLI.",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-4",
+    "number": 4,
+    "sourcePage": 5,
+    "domainId": "collaboration",
+    "prompt": "What is the MINIMUM Snowflake edition needed to apply 90 days of Time Travel to an object?",
+    "options": [
+      "Standard",
+      "Enterprise",
+      "Business Critical",
+      "Virtual Private Snowflake (VPS)"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Enterprise。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-5",
+    "number": 5,
+    "sourcePage": 6,
+    "domainId": "performance",
+    "prompt": "Which objects can be recovered after being dropped? (Choose two.)",
+    "options": [
+      "View",
+      "Transient table",
+      "Temporary table",
+      "Permanent table",
+      "Materialized view"
+    ],
+    "correctAnswers": [
+      3,
+      4
+    ],
+    "answerLabels": [
+      "D",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 D, E：D. Permanent table；E. Materialized view。讨论区解析：Transient tables technically have 0–1 day Time Travel, but in exam context they are considered unrecoverable because they have no Fail-safeand recovery is not guaranteed — which is exactly why you wouldn't use them for data you care about protecting",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-6",
+    "number": 6,
+    "sourcePage": 7,
+    "domainId": "loading",
+    "prompt": "How does Snowflake support storage for external tables?",
+    "options": [
+      "Snowflake automatically replicates and stores all external table data.",
+      "Snowflake stores the metadata from external tables.",
+      "Snowflake references external tables using internal directory tables.",
+      "Snowflake references external tables using internal transient tables."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Snowflake stores the metadata from external tables.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-7",
+    "number": 7,
+    "sourcePage": 8,
+    "domainId": "architecture",
+    "prompt": "Which Snowflake features support the ability to write to a Git repository?",
+    "options": [
+      "Snowsight dashboards and stages",
+      "Snowpipe and dynamic tables",
+      "Stored procedures, tasks, and worksheets",
+      "Streamlit applications, workspaces, and notebooks"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Streamlit applications, workspaces, and notebooks。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-8",
+    "number": 8,
+    "sourcePage": 9,
+    "domainId": "performance",
+    "prompt": "A Snowflake Practitioner is tasked with designing a data lakehouse architecture that requires: 1. Support for ACID transactions to ensure data consistency 2. The ability to evolve schemas over time without rewriting existing data 3. Efficient querying capabilities on large datasets Which table type meets these requirements?",
+    "options": [
+      "Permanent",
+      "Iceberg",
+      "External",
+      "Transient"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Iceberg。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-9",
+    "number": 9,
+    "sourcePage": 10,
+    "domainId": "architecture",
+    "prompt": "What is SnowSQL used for?",
+    "options": [
+      "Developing dashboards",
+      "Loading and unloading data",
+      "Developing Snowflake Native Apps",
+      "Monitoring data transformation activity"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Loading and unloading data。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-10",
+    "number": 10,
+    "sourcePage": 11,
+    "domainId": "collaboration",
+    "prompt": "What is the impact on storage when a user clones a 1 TB sized table and updates 10% of the rows in the cloned table?",
+    "options": [
+      "Only metadata is stored",
+      "Full storage is duplicated",
+      "No additional storage is used",
+      "Only modified data consumes additional storage"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Only modified data consumes additional storage。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-11",
+    "number": 11,
+    "sourcePage": 12,
+    "domainId": "architecture",
+    "prompt": "Which Snowflake feature, interface, or service is used to create and share custom web apps for ML and data science?",
+    "options": [
+      "Cortex AI",
+      "Streamlit in Snowflake",
+      "Snowpipe",
+      "Snowsight"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Streamlit in Snowflake。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-12",
+    "number": 12,
+    "sourcePage": 13,
+    "domainId": "architecture",
+    "prompt": "Which table type is supported by Open Catalog to provide centralized, read and write access to a table?",
+    "options": [
+      "Hybrid",
+      "Iceberg",
+      "Dynamic",
+      "Event"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Iceberg。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-13",
+    "number": 13,
+    "sourcePage": 14,
+    "domainId": "architecture",
+    "prompt": "Which are key characteristics of the Query Processing layer? (Choose two.)",
+    "options": [
+      "Up to 10% of daily usage of compute is free",
+      "Storage is tied to the number of compute clusters",
+      "The size of virtual warehouses can be changed dynamically",
+      "Virtual warehouse start and stop operations can be automated",
+      "Compute costs are calculated per hour of virtual warehouse runtime"
+    ],
+    "correctAnswers": [
+      2,
+      3
+    ],
+    "answerLabels": [
+      "C",
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 C, D：C. The size of virtual warehouses can be changed dynamically；D. Virtual warehouse start and stop operations can be automated。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-14",
+    "number": 14,
+    "sourcePage": 15,
+    "domainId": "architecture",
+    "prompt": "Which feature or service should be used to identify data about a department that was responsible for a recent revenue shortfall?",
+    "options": [
+      "Snowpark",
+      "Snowpipe",
+      "ML Functions",
+      "AI_EXTRACT"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. ML Functions。讨论区解析：https://docs.snowflake.com/en/user-guide/ml-functions/top-insights Use cases for Top Insights include: Time-series analysis: Identify drivers of a metric’s change over time. For example, automatically identify the locations, salespeople,customers, verticals, and other factors that are responsible for a recent revenue shortfall.Vertical analysis: Identify the drivers of diﬀerences in a metric among various verticals. For example, to understand which user segmentsare responsible for diﬀerences in new user growth betw",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-15",
+    "number": 15,
+    "sourcePage": 16,
+    "domainId": "architecture",
+    "prompt": "Which tools, services, or features should be used to write code when using the Snowpark API? (Choose two.)",
+    "options": [
+      "Snowpark Container Services",
+      "Snowpark for Scala",
+      "Snowpark for Python",
+      "Streamlit in Snowflake",
+      "SQL Scripting"
+    ],
+    "correctAnswers": [
+      1,
+      2
+    ],
+    "answerLabels": [
+      "B",
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 B, C：B. Snowpark for Scala；C. Snowpark for Python。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-16",
+    "number": 16,
+    "sourcePage": 17,
+    "domainId": "architecture",
+    "prompt": "The data retention time for a schema is set for 5 days, and the data retention time for the database that contains the schema is set for 10 days. Based on these settings, what would the default data retention time be for a permanent table created in the schema?",
+    "options": [
+      "0 days",
+      "1 day",
+      "5 days",
+      "10 days"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. 5 days。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-17",
+    "number": 17,
+    "sourcePage": 18,
+    "domainId": "architecture",
+    "prompt": "A user adds a new connection called [dev_project] to their config.toml file, which includes setting role = DEVELOPER. Then the user runs this command: snowsql -c dev_project. When they run SELECT current_role(); inside the session, the query returns SYSADMIN. Why did Snowflake CLI use the SYSADMIN role?",
+    "options": [
+      "SYSADMIN is the Engineer’s default role and cannot be overridden by the config.toml file.",
+      "The [dev_project] connection in the config.toml file was missing a warehouse parameter, which caused the CLI to ignore the role parameter.",
+      "A SNOWFLAKE_ROLE environment variable was set to SYSADMIN, which takes precedence over the config.toml file.",
+      "The config.toml file is used if the connection is also passed as a command-line flag, such as snowsql --role DEVELOPER."
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. A SNOWFLAKE_ROLE environment variable was set to SYSADMIN, which takes precedence over the config.toml file.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-18",
+    "number": 18,
+    "sourcePage": 19,
+    "domainId": "architecture",
+    "prompt": "A table is created with a column set to a data type of CHARACTER(25). If the table is viewed in the database section of Snowsight, what data type will be shown for the column?",
+    "options": [
+      "STRING(25)",
+      "TEXT(25)",
+      "VARCHAR(25)",
+      "CHARACTER(25)"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. VARCHAR(25)。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-19",
+    "number": 19,
+    "sourcePage": 20,
+    "domainId": "architecture",
+    "prompt": "A user oversees a database with several large, frequently updated tables. They observe rising storage costs, mainly due to the Continuous Data Protection (CDP) features. To reduce storage expenses while keeping data protection intact, which table type should they choose?",
+    "options": [
+      "Permanent",
+      "Transient",
+      "Temporary",
+      "External"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Transient。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-20",
+    "number": 20,
+    "sourcePage": 21,
+    "domainId": "collaboration",
+    "prompt": "A large global company needs to maximize system availability in the event of a cloud provider failure that affects Snowflake services. Which configuration will support this requirement?",
+    "options": [
+      "Scheduled database downloads to cloud storage.",
+      "A failover group to a separate region and cloud provider.",
+      "Account replication within the same region and cloud provider.",
+      "Scheduled database cloning maintained in the Snowflake account."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. A failover group to a separate region and cloud provider.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-21",
+    "number": 21,
+    "sourcePage": 22,
+    "domainId": "architecture",
+    "prompt": "Which interface or service allow users to connect to Snowflake with Python? (Choose two.)",
+    "options": [
+      "Snowpark API",
+      "Snowsight",
+      "Streamlit in Snowflake",
+      "AI_EXTRACT",
+      "Snowflake CLI"
+    ],
+    "correctAnswers": [
+      0,
+      4
+    ],
+    "answerLabels": [
+      "A",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, E：A. Snowpark API；E. Snowflake CLI。讨论区解析：The Snowflake CLI is a command-line tool designed for managing Snowflake infrastructure, objects, app development, and stagedeployments via terminal commands, rather than a Python library or service for writing Python code to connect to Snowflake",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-22",
+    "number": 22,
+    "sourcePage": 23,
+    "domainId": "governance",
+    "prompt": "An organization is preparing for a data structure change on a critical table, SALES_BUDGET, and needs to identify which users, dashboards, reports and processes might be affected. What action should be performed to determine the impact of this change?",
+    "options": [
+      "Create a stream on SALES_BUDGET and check for inserted or updated rows to identify the users responsible for data access.",
+      "Use SHOW GRANTS ON SALES_BUDGET to see which roles or users accessed the table and track their query frequency.",
+      "Query SNOWFLAKE.ACCOUNT_USAGE.ACCESS_HISTORY to see who accessed the SALES_BUDGET table and what columns were read.",
+      "Review TABLE_STORAGE_METRICS in the INFORMATION_SCHEMA to estimate read-frequency based on the table size and compression changes."
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Query SNOWFLAKE.ACCOUNT_USAGE.ACCESS_HISTORY to see who accessed the SALES_BUDGET table and what columns were read.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-23",
+    "number": 23,
+    "sourcePage": 24,
+    "domainId": "governance",
+    "prompt": "Which Snowflake feature can be used to identify tables, views, and columns that contain sensitive information by assigning and querying metadata?",
+    "options": [
+      "Tags",
+      "External Tokens",
+      "Row access policies",
+      "Tag-based masking policies"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Tags。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-24",
+    "number": 24,
+    "sourcePage": 25,
+    "domainId": "governance",
+    "prompt": "Which feature uses a Snowflake key with a customer-managed key to protect data?",
+    "options": [
+      "Trust Center",
+      "Tri-Secret Secure",
+      "Key-pair authentication",
+      "Multi-Factor Authentication (MFA)"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Tri-Secret Secure。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-25",
+    "number": 25,
+    "sourcePage": 26,
+    "domainId": "architecture",
+    "prompt": "Which view shows the column lineage within an account?",
+    "options": [
+      "ACCESS_HISTORY",
+      "ALERT_HISTORY",
+      "DATA_QUALITY_MONITORING_USAGE_HISTORY",
+      "EXTERNAL_ACCESS_HISTORY"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. ACCESS_HISTORY。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-26",
+    "number": 26,
+    "sourcePage": 27,
+    "domainId": "architecture",
+    "prompt": "Which view or command provides the MOST detailed storage information for a table?",
+    "options": [
+      "SHOW TABLES",
+      "DESC TABLE",
+      "ACCOUNT_USAGE.STORAGE_USAGE",
+      "ACCOUNT_USAGE.TABLE_STORAGE_METRICS"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. ACCOUNT_USAGE.TABLE_STORAGE_METRICS。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-27",
+    "number": 27,
+    "sourcePage": 28,
+    "domainId": "collaboration",
+    "prompt": "What feature specifies which roles are allowed to see a particular record in a table?",
+    "options": [
+      "Dynamic Data Masking",
+      "Secure Data Sharing",
+      "Row access policy",
+      "Object tagging"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Row access policy。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-28",
+    "number": 28,
+    "sourcePage": 29,
+    "domainId": "governance",
+    "prompt": "How can a user work with multiple assigned roles without the need to frequently switch roles?",
+    "options": [
+      "Use secondary roles and primary roles.",
+      "Grant the user the ACCOUNTADMIN role.",
+      "Grant the user the parent role of the roles that have been assigned.",
+      "Create a new role and grant it to the user, then grant the existing roles to the new role."
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Use secondary roles and primary roles.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-29",
+    "number": 29,
+    "sourcePage": 30,
+    "domainId": "governance",
+    "prompt": "Which feature allows users to audit how sensitive data is being accessed over time?",
+    "options": [
+      "Column-level security",
+      "Row-level security",
+      "Tag-based masking policy",
+      "Object tagging"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Object tagging。讨论区解析：Answer is C:D (Object tagging) is incorrect becuase: Object tagging simply labels the data (e.g., tagging a column as EMAIL) but does not apply theactionable masking policy or directly create the protection and access compliance layer on its ownupvoted 1 times Tag-based masking policies: Combine the power of tagging sensitive data categories with automated policy enforcement, helpingorganizations manage, track, and monitor secure data access compliance",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-30",
+    "number": 30,
+    "sourcePage": 31,
+    "domainId": "governance",
+    "prompt": "In a managed access schema, which role or privilege can grant permissions on schema objects to other roles? (Choose two.)",
+    "options": [
+      "The owner of the schema",
+      "SYSADMIN",
+      "ORGADMIN",
+      "USERADMIN",
+      "Roles with the MANAGE GRANTS privilege"
+    ],
+    "correctAnswers": [
+      0,
+      4
+    ],
+    "answerLabels": [
+      "A",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, E：A. The owner of the schema；E. Roles with the MANAGE GRANTS privilege。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-31",
+    "number": 31,
+    "sourcePage": 32,
+    "domainId": "governance",
+    "prompt": "Departments A and B both need to access the same data, but sensitive information needs to be hidden from department B. How should this be accomplished?",
+    "options": [
+      "Create and share a report with department B that does not contain the sensitive data.",
+      "Set up a masking policy on the sensitive data.",
+      "Build separate data marts and reports for each department.",
+      "Restrict department B’s access to columns with sensitive data."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Set up a masking policy on the sensitive data.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-32",
+    "number": 32,
+    "sourcePage": 33,
+    "domainId": "governance",
+    "prompt": "Which methods for a second factor of authentication does Snowflake support? (Choose two.)",
+    "options": [
+      "Email codes",
+      "Authenticator applications",
+      "Social logins",
+      "Passkeys",
+      "Security questions"
+    ],
+    "correctAnswers": [
+      1,
+      3
+    ],
+    "answerLabels": [
+      "B",
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 B, D：B. Authenticator applications；D. Passkeys。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-33",
+    "number": 33,
+    "sourcePage": 34,
+    "domainId": "governance",
+    "prompt": "Which action can be performed by the SYSADMIN role without requiring elevated privileges from the ACCOUNTADMIN or SECURITYADMIN role?",
+    "options": [
+      "Granting privileges",
+      "Creating a new user",
+      "Managing virtual warehouses",
+      "Viewing billing and usage information"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Managing virtual warehouses。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-34",
+    "number": 34,
+    "sourcePage": 35,
+    "domainId": "loading",
+    "prompt": "Which security features are used to control inbound access to Snowflake and internal stages? (Choose two.)",
+    "options": [
+      "Network rules",
+      "Feature policies",
+      "Network policies",
+      "Packages policies",
+      "Authentication policies"
+    ],
+    "correctAnswers": [
+      0,
+      2
+    ],
+    "answerLabels": [
+      "A",
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, C：A. Network rules；C. Network policies。讨论区解析：1e15c5d1 month, 3 weeks ago A. Network Rules - define the network identifiersC. Network Policies - group Network Rules enforcement and assign them to accounts, users, or integration levels",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-35",
+    "number": 35,
+    "sourcePage": 36,
+    "domainId": "governance",
+    "prompt": "Which built-in function should be used to determine if the current role has inherited privileges from another specified role?",
+    "options": [
+      "INVOKER_ROLE",
+      "CURRENT_ROLE",
+      "IS_ROLE—IN_SESSION",
+      "CURRENT_ROLE_TYPE"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. IS_ROLE—IN_SESSION。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-36",
+    "number": 36,
+    "sourcePage": 37,
+    "domainId": "governance",
+    "prompt": "A Snowflake user is using the QUERY_HISTORY view in the ACCOUNT_USAGE schema to gather information about two queries that ran in the past 10 minutes, but the expected data is missing. What would cause this to occur?",
+    "options": [
+      "The queries were run on a multi-cluster virtual warehouse.",
+      "The queries were able to take advantage of the results cache.",
+      "The ACCOUNT_USAGE schema does not provide real-time results.",
+      "The user does not have privileges to access the QUERY_HISTORY view."
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. The ACCOUNT_USAGE schema does not provide real-time results.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-37",
+    "number": 37,
+    "sourcePage": 38,
+    "domainId": "governance",
+    "prompt": "Which feature allows a user to review the monthly projected costs of a Snowflake resource against the monthly actual costs?",
+    "options": [
+      "Budgets",
+      "Auto-suspend",
+      "Scaling Policy",
+      "Resource monitor"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Budgets。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-38",
+    "number": 38,
+    "sourcePage": 39,
+    "domainId": "loading",
+    "prompt": "A team needs to monitor and receive alerts for Snowpipe credit usage. Why should a custom budget be used instead of a resource monitor?",
+    "options": [
+      "The custom budget is the only tool that can automatically send alert emails to users outside the ACCOUNTADMIN role.",
+      "Resource monitors can only track costs for one virtual warehouse, but custom budgets monitor the entire account.",
+      "Custom budgets track historical spending, while a resource monitor provides a cost forecast.",
+      "Custom budgets can track costs by object tags and include serverless features."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Custom budgets can track costs by object tags and include serverless features.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-39",
+    "number": 39,
+    "sourcePage": 40,
+    "domainId": "governance",
+    "prompt": "These application roles exist in a company's environment: DEVELOPER_ROLE and ETL_ROLE. Both roles have been granted USAGE, CREATE, and SELECT privileges on the same database and schema table object. A user with the DEVELOPER_ROLE creates a new table named MYTABLE within the MYDB.MYSCH schema. When a user with the ETL_ROLE attempts to access MYDB.MYSCH.MYTABLE, they receive an error indicating insufficient privileges. Which statement will enable the ETL_ROLE to access MYDB.MYSCH.MYTABLE upon its creation?",
+    "options": [
+      "GRANT SELECT ON TABLE MYTABLE TO ROLE ETL_ROLE;",
+      "GRANT SELECT ON TABLE MYTABLE TO ROLE DEVELOPER_ROLE;",
+      "GRANT SELECT ON FUTURE TABLES IN SCHEMA MYSCH TO ROLE ETL_ROLE;",
+      "GRANT SELECT ON FUTURE TABLES IN SCHEMA MYSCH TO ROLE DEVELOPER_ROLE;"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. GRANT SELECT ON FUTURE TABLES IN SCHEMA MYSCH TO ROLE ETL_ROLE;。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-40",
+    "number": 40,
+    "sourcePage": 41,
+    "domainId": "governance",
+    "prompt": "Which security feature supports the replacement of active keys to enhance key-pair authentication?",
+    "options": [
+      "Authentication",
+      "Passkeys",
+      "Rotation",
+      "Time-based one-time passcodes"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Rotation。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-41",
+    "number": 41,
+    "sourcePage": 42,
+    "domainId": "loading",
+    "prompt": "Which function is used to retrieve all errors of the past execution of a COPY INTO <table> command?",
+    "options": [
+      "LIST",
+      "VALIDATE",
+      "RESULT_SCAN",
+      "COPY_HISTORY"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. VALIDATE。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-42",
+    "number": 42,
+    "sourcePage": 43,
+    "domainId": "loading",
+    "prompt": "Which should be used for near real-time feedback on data ingestion and ensuring the data is almost instantly available for analysis?",
+    "options": [
+      "Snowpipe",
+      "The COPY INTO <table> command",
+      "Streams",
+      "Snowpipe Streaming"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Snowpipe Streaming。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-43",
+    "number": 43,
+    "sourcePage": 44,
+    "domainId": "loading",
+    "prompt": "A user needs to load Snowflake files from a stage that contains data from the past 5 years while using the LEAST amount of operational overhead. The file names include the year in this format: SALES_2025_01.gz. What command should be used to load the data from 2024?",
+    "options": [
+      "The COPY INTO command to individually load the needed files.",
+      "The COPY INTO command using the PATTERN parameter to define the needed files.",
+      "The REMOVE command to eliminate unwanted files, then use the COPY INTO command.",
+      "The GET command to download the needed files, then create a new stage and load the files onto the stage using the COPY INTO command."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. The COPY INTO command using the PATTERN parameter to define the needed files.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-44",
+    "number": 44,
+    "sourcePage": 45,
+    "domainId": "governance",
+    "prompt": "A data team needs to connect Snowflake to a remote Git repository over a public network using a personal access token for authentication. Which components should be created in Snowflake to implement this connection? (Choose two.)",
+    "options": [
+      "Storage integration",
+      "Azure Private Link",
+      "A secret",
+      "An API integration",
+      "A security integration"
+    ],
+    "correctAnswers": [
+      2,
+      4
+    ],
+    "answerLabels": [
+      "C",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 C, E：C. A secret；E. A security integration。讨论区解析：Connecting Snowflake to a remote Git repository requires two specific Snowflake objects working together:A SecretAn API Integrationupvoted 1 times",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-45",
+    "number": 45,
+    "sourcePage": 46,
+    "domainId": "loading",
+    "prompt": "How can a user optimize the performance of a COPY INTO <table> query that is being run on a very large file?",
+    "options": [
+      "Split the file into smaller files.",
+      "Increase the virtual warehouse size.",
+      "Set the SIZE_LIMIT option to be larger than the file size.",
+      "Set the COMPRESSION = AUTO option in the file format."
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Split the file into smaller files.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-46",
+    "number": 46,
+    "sourcePage": 47,
+    "domainId": "loading",
+    "prompt": "When using the COPY INTO <table> command, which parameter should be used to load unstructured data?",
+    "options": [
+      "FORCE",
+      "LOAD_UNCERTAIN_FILES",
+      "FILE_PROCESSOR",
+      "LOAD_MODE"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. FILE_PROCESSOR。讨论区解析：LOAD_MODE is not a standard copy option parameter within the Snowflake native SQL syntax for the COPY INTO <table> statement.",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-47",
+    "number": 47,
+    "sourcePage": 48,
+    "domainId": "loading",
+    "prompt": "Bulk data is being loaded from an external stage every day, using this command: COPY INTO source_table - FROM s3://source/data/files - STORAGE_INTEGRATION = s3_source_int FILE_FORMAT = (FORMAT_NAME = source_format) PATTERN='sales.*[.]csv'; How will the data be loaded?",
+    "options": [
+      "All files that match the specified format will be appended.",
+      "Only new files will be loaded, previously-loaded files will be skipped.",
+      "All s3://source/data/files/*.csv files will be loaded from a stage.",
+      "The source_table will be truncated and all files from s3://source/data/files will be loaded."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Only new files will be loaded, previously-loaded files will be skipped.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-48",
+    "number": 48,
+    "sourcePage": 49,
+    "domainId": "loading",
+    "prompt": "What is the FASTEST way to load specific staged files using the COPY INTO <location> command?",
+    "options": [
+      "Use wildcard characters in the file path.",
+      "Select files based on the path prefix of the stage.",
+      "List file names using the FILES parameter.",
+      "Use pattern matching using the PATTERN parameter."
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. List file names using the FILES parameter.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-49",
+    "number": 49,
+    "sourcePage": 50,
+    "domainId": "loading",
+    "prompt": "Which copy option is used to include column headers when unloading data to Parquet files?",
+    "options": [
+      "PARSE_HEADER = TRUE",
+      "SKIP_HEADER = <integer>",
+      "HEADER = TRUE",
+      "HEADER = ('<header_1>' = '<value_1>')"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. HEADER = TRUE。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-50",
+    "number": 50,
+    "sourcePage": 51,
+    "domainId": "loading",
+    "prompt": "Which object provides a list of the files stored in a stage?",
+    "options": [
+      "Semantic view",
+      "Directory table",
+      "Materialized view",
+      "Information schema"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Directory table。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-51",
+    "number": 51,
+    "sourcePage": 52,
+    "domainId": "loading",
+    "prompt": "What is the recommended use for the COPY INTO <location> SINGLE = TRUE; command?",
+    "options": [
+      "To load data without duplications",
+      "To load an individual file",
+      "To copy data and parse the results into single stages",
+      "To unload a single file from a table into a stage"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. To unload a single file from a table into a stage。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-52",
+    "number": 52,
+    "sourcePage": 53,
+    "domainId": "loading",
+    "prompt": "If a query is being used to unload a 1 TB table into a stage, which keyword will be shown in the Query History?",
+    "options": [
+      "INSERT",
+      "UNLOAD",
+      "COPY",
+      "UPDATE"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. COPY。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-53",
+    "number": 53,
+    "sourcePage": 54,
+    "domainId": "loading",
+    "prompt": "What does the NULL_IF parameter do when loading CSV data into Snowflake?",
+    "options": [
+      "Converts binary data to text format",
+      "Converts specific strings to SQL NULL",
+      "Removes NULL values from the data set",
+      "Replaces all NULL values with empty strings"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Converts specific strings to SQL NULL。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-54",
+    "number": 54,
+    "sourcePage": 55,
+    "domainId": "loading",
+    "prompt": "What can load data from an external stage immediately after the data is taken in?",
+    "options": [
+      "COPY command scheduled with a Task",
+      "Snowflake Kafka Connector",
+      "Auto-ingest Snowpipe",
+      "External table"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Auto-ingest Snowpipe。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-55",
+    "number": 55,
+    "sourcePage": 56,
+    "domainId": "loading",
+    "prompt": "What are characteristics of table streams?",
+    "options": [
+      "Only one stream can be created for each table.",
+      "Dropping tables will make any stream on the table stale.",
+      "Renaming tables will make any stream on the table stale.",
+      "Streams can be created to track changes on views, external tables, and external stages."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Dropping tables will make any stream on the table stale.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-56",
+    "number": 56,
+    "sourcePage": 57,
+    "domainId": "performance",
+    "prompt": "Which table type should be used with an insert-only stream?",
+    "options": [
+      "Temporary",
+      "Hybrid",
+      "External",
+      "Transient"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. External。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-57",
+    "number": 57,
+    "sourcePage": 58,
+    "domainId": "loading",
+    "prompt": "Which option will define the column type when unloading data into Parquet-formatted files?",
+    "options": [
+      "BINARY_AS_TEXT = TRUE",
+      "EMPTY_FIELD_AS_NULL = FALSE",
+      "CAST or : : in the COPY INTO statement",
+      "SINGLE = TRUE"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. CAST or : : in the COPY INTO statement。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-58",
+    "number": 58,
+    "sourcePage": 59,
+    "domainId": "loading",
+    "prompt": "How are directory tables used in data pipelines? (Choose two.)",
+    "options": [
+      "To query structured data residing in an external stage",
+      "To unload the results of unstructured file processing",
+      "To query a list of staged files that reside in internal or external storage",
+      "To store role-based access control information for unstructured data",
+      "To join data with a Snowflake table that contains unstructured file metadata"
+    ],
+    "correctAnswers": [
+      2,
+      4
+    ],
+    "answerLabels": [
+      "C",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 C, E：C. To query a list of staged files that reside in internal or external storage；E. To join data with a Snowflake table that contains unstructured file metadata。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-59",
+    "number": 59,
+    "sourcePage": 60,
+    "domainId": "loading",
+    "prompt": "When regularly unloading similarly formatted semi-structured data, where should copy options be specified?",
+    "options": [
+      "In a table definition",
+      "In a named file format",
+      "In a named stage definition",
+      "In the COPY command"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. In a named file format。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-60",
+    "number": 60,
+    "sourcePage": 61,
+    "domainId": "performance",
+    "prompt": "A table gets updated throughout the day. A user wants to automate the process of table changes by capturing only the changed rows every 20 minutes and applying business transformations without manual intervention. How should this be accomplished?",
+    "options": [
+      "Create a stream and run a task only when there are changes.",
+      "Create a task that triggers every 20 minutes.",
+      "Create a stream and schedule a task every 20 minutes.",
+      "Use a dynamic table to materialize changes and run a task for the business transformations every 20 minutes."
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Create a stream and schedule a task every 20 minutes.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-61",
+    "number": 61,
+    "sourcePage": 62,
+    "domainId": "architecture",
+    "prompt": "Which SNOWFLAKE.ACCOUNT_USAGE schema view would allow a user to find opportunities to optimize a slow-running query?",
+    "options": [
+      "QUERY_ATTRIBUTION_HISTORY",
+      "QUERY_INSIGHTS",
+      "QUERY_ACCELERATION_HISTORY",
+      "ACCESS_HISTORY"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. QUERY_INSIGHTS。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-62",
+    "number": 62,
+    "sourcePage": 63,
+    "domainId": "performance",
+    "prompt": "A Developer has scheduled a dynamic table to refresh incrementally, but the process uses a full refresh instead. When used, which query operator will cause a full refresh instead of the scheduled incremental refresh?",
+    "options": [
+      "DISTINCT",
+      "GROUP BY",
+      "LATERAL JOIN",
+      "UNION ALL"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. LATERAL JOIN。讨论区解析：When DISTINCT is used, Snowflake cannot track incremental changes because removing duplicates requires seeing the full dataset to knowwhether a value is truly distinct after a change.",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-63",
+    "number": 63,
+    "sourcePage": 64,
+    "domainId": "performance",
+    "prompt": "Which queries can be executed in parallel using the query acceleration service? (Choose two.)",
+    "options": [
+      "Large scans that delete many rows and columns",
+      "Large scans that use an aggregation or selective filter",
+      "Queries with complex joins on small tables",
+      "Small scans that read and write rows very slowly",
+      "Large scans that insert many new rows"
+    ],
+    "correctAnswers": [
+      1,
+      4
+    ],
+    "answerLabels": [
+      "B",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 B, E：B. Large scans that use an aggregation or selective filter；E. Large scans that insert many new rows。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-64",
+    "number": 64,
+    "sourcePage": 65,
+    "domainId": "performance",
+    "prompt": "Which Snowflake objects support quick result retrievals for queries that contain aggregate functions? (Choose two.)",
+    "options": [
+      "Hybrid table",
+      "Materialized view",
+      "Dynamic table",
+      "External table",
+      "Secure view"
+    ],
+    "correctAnswers": [
+      1,
+      2
+    ],
+    "answerLabels": [
+      "B",
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 B, C：B. Materialized view；C. Dynamic table。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-65",
+    "number": 65,
+    "sourcePage": 66,
+    "domainId": "performance",
+    "prompt": "Which view or feature can be used to analyze query performance to identify which operations are the most time-consuming?",
+    "options": [
+      "The search optimization service",
+      "The QUERY_HISTORY view",
+      "The Query Profile",
+      "The WAREHOUSE_LOAD_HISTORY view"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. The Query Profile。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-66",
+    "number": 66,
+    "sourcePage": 67,
+    "domainId": "performance",
+    "prompt": "Which feature is used to optimize storage performance?",
+    "options": [
+      "Search optimization service",
+      "Materialized view",
+      "Automatic Clustering",
+      "Hybrid table"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Automatic Clustering。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-67",
+    "number": 67,
+    "sourcePage": 68,
+    "domainId": "performance",
+    "prompt": "Which object can be referenced from a User-Defined Function (UDF)?",
+    "options": [
+      "View",
+      "Stream",
+      "External table",
+      "Materialized view"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. View。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-68",
+    "number": 68,
+    "sourcePage": 69,
+    "domainId": "loading",
+    "prompt": "Which scaling feature will start a new cluster only when the system estimates there is enough query load to keep the cluster busy for at least 6 minutes?",
+    "options": [
+      "The Standard scaling policy",
+      "The Economy scaling policy",
+      "Auto-scale mode",
+      "Maximized mode"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. The Economy scaling policy。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-69",
+    "number": 69,
+    "sourcePage": 70,
+    "domainId": "architecture",
+    "prompt": "How can a user validate if a micro-partition is pruning efficiently?",
+    "options": [
+      "By inspecting the statistics pane in the Query Profile",
+      "By inspecting the query details output in Snowsight",
+      "By using the SYSTEM$CLUSTERING_INFORMATION() function",
+      "By querying the INFORMATION_SCHEMA.TABLES view"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. By inspecting the statistics pane in the Query Profile。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-70",
+    "number": 70,
+    "sourcePage": 71,
+    "domainId": "performance",
+    "prompt": "What actions can be taken to reduce memory spilling for queries that are too large to fit into memory? (Choose two.)",
+    "options": [
+      "Increase the size of the virtual warehouse.",
+      "Edit the queries to process the data in smaller batches.",
+      "Increase the size of the virtual warehouse clusters.",
+      "Suspend and then resume the virtual warehouse.",
+      "Set a clustering key on the tables used in the queries."
+    ],
+    "correctAnswers": [
+      0,
+      1
+    ],
+    "answerLabels": [
+      "A",
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, B：A. Increase the size of the virtual warehouse.；B. Edit the queries to process the data in smaller batches.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-71",
+    "number": 71,
+    "sourcePage": 72,
+    "domainId": "performance",
+    "prompt": "The number of virtual warehouse users and the number of reports the users access has been increasing. Which step should be taken to find out if the warehouse is overloaded?",
+    "options": [
+      "Monitor the duration of running queries.",
+      "Determine if any queries are being queued.",
+      "Check the number of running queries in the Query History.",
+      "Determine if there are queries that will benefit from the query acceleration service."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Determine if any queries are being queued.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-72",
+    "number": 72,
+    "sourcePage": 73,
+    "domainId": "performance",
+    "prompt": "Which feature or service will optimize point lookups on large tables that have high-cardinality columns?",
+    "options": [
+      "Caching",
+      "Clustering",
+      "A materialized view",
+      "Search optimization service"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Search optimization service。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-73",
+    "number": 73,
+    "sourcePage": 74,
+    "domainId": "performance",
+    "prompt": "A user is investigating a slow-running query using the Query Profile. The profile shows a join operator that consumes 10,000 records from the left table and 5,000 records from the right table but produces 50,000,000 records as output. The join operator is consuming 95% of the total query execution time. What is causing this performance issue and how should it be fixed?",
+    "options": [
+      "The warehouse is too small to handle the join operation efficiently. To fix the warehouse should be increased to size X-Large or larger.",
+      "The join is causing data to spill to the disk. To fix add more filters before the join to reduce the input data volume.",
+      "The query is causing data to spill to the disk. To fix add more filters before the join to reduce the input data volume.",
+      "The query has an exploding join caused by a missing join condition. To fix verify the join conditions in the query are specified correctly and sufficiently restrictive."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. The query has an exploding join caused by a missing join condition. To fix verify the join conditions in the query are specified correctly and sufficiently restrictive.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-74",
+    "number": 74,
+    "sourcePage": 75,
+    "domainId": "architecture",
+    "prompt": "Which types of values lead to slower queries and increased storage consumption when placed within a VARIANT column? (Choose two.)",
+    "options": [
+      "JSON null values",
+      "Floating-point numbers",
+      "Arrays",
+      "Vectors",
+      "Timestamps within strings"
+    ],
+    "correctAnswers": [
+      0,
+      4
+    ],
+    "answerLabels": [
+      "A",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, E：A. JSON null values；E. Timestamps within strings。讨论区解析：https://docs.snowflake.com/en/user-guide/semistructured-considerations For better pruning and less storage consumption, we recommend flattening your OBJECT and key data into separate relational columns ifyour semi-structured data includes:Dates and timestamps, especially non-ISO 8601 dates and timestamps, as string valuesNumbers within stringsArraysNon-native values (such as dates and timestamps in JSON) are stored as strings when loaded into a VARIANT column, so operations on thesevalues could be slower and also c",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-75",
+    "number": 75,
+    "sourcePage": 76,
+    "domainId": "architecture",
+    "prompt": "Which function should be used to access values from an object?",
+    "options": [
+      "OBJECT_KEYS",
+      "OBJECT_PICK",
+      "GET_PATH",
+      "XMLGET"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. GET_PATH。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-76",
+    "number": 76,
+    "sourcePage": 77,
+    "domainId": "performance",
+    "prompt": "Query results contain a small number of rows or columns relative to the base table with these characteristics: 1. The results require significant processing 2. The base table changes infrequently 3. The query is using only one large table Which data object should be created to improve the performance?",
+    "options": [
+      "A secure view",
+      "A materialized view",
+      "A standard view",
+      "A hybrid table"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. A materialized view。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-77",
+    "number": 77,
+    "sourcePage": 78,
+    "domainId": "architecture",
+    "prompt": "Which statement will return a NULL value instead of raising an error when converting an input to a date?",
+    "options": [
+      "SELECT TRY_TO_DATE(START_DATE) FROM TABLE_A;",
+      "SELECT DATE(START_DATE) FROM TABLE_A;",
+      "SELECT START_DATE::DATE FROM TABLE_A;",
+      "SELECT TO_DATE(START_DATE) FROM TABLE_A;"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. SELECT TRY_TO_DATE(START_DATE) FROM TABLE_A;。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-78",
+    "number": 78,
+    "sourcePage": 79,
+    "domainId": "architecture",
+    "prompt": "Which query creates a JSON-style object with the keys name and age, and values Alice and 30?",
+    "options": [
+      "SELECT {'name': 'Alice', 'age': 30};",
+      "SELECT TO_OBJECT('name', 'Alice', 'age', 30);",
+      "SELECT OBJECT_INSERT('name', 'Alice', 'age', 30);",
+      "SELECT OBJECT_CONSTRUCT('name', 'Alice', 'age', 30);"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. SELECT OBJECT_CONSTRUCT('name', 'Alice', 'age', 30);。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-79",
+    "number": 79,
+    "sourcePage": 80,
+    "domainId": "performance",
+    "prompt": "A size Medium virtual warehouse processes scheduled reports for a team. More than 30 reports run simultaneously during business hours, and the team requires high availability with consistent performance and minimal startup time. What action should be taken to help avoid queuing when these reports are run?",
+    "options": [
+      "Increase the size of the warehouse.",
+      "Enable a multi-cluster warehouse with Auto-scale mode and an Economy scaling policy.",
+      "Enable a multi-cluster warehouse with Maximized mode.",
+      "Enable a multi-cluster warehouse with Auto-scale mode and a Standard scaling policy."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Enable a multi-cluster warehouse with Auto-scale mode and a Standard scaling policy.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-80",
+    "number": 80,
+    "sourcePage": 81,
+    "domainId": "architecture",
+    "prompt": "How does clustering depth impact query performance?",
+    "options": [
+      "Low clustering depth indicates that there are a large number of overlapping micro-partitions and that the query pruning is efficient.",
+      "High clustering depth indicates that queries are taking advantage of caching and that the queries are running efficiently.",
+      "Low clustering depth indicates that there are few overlapping micro-partitions and that the query pruning is efficient.",
+      "High clustering depth indicates that too many users are scanning the same micro-partitions, slowing down query performance."
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Low clustering depth indicates that there are few overlapping micro-partitions and that the query pruning is efficient.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-81",
+    "number": 81,
+    "sourcePage": 82,
+    "domainId": "performance",
+    "prompt": "A size Medium standard virtual warehouse is being used to continuously load data. The data will be consumed using reports. Which step will optimize costs?",
+    "options": [
+      "Create separate warehouses for each workload.",
+      "Enable the query acceleration service.",
+      "Change to a multi-cluster warehouse.",
+      "Resize the warehouse to size Small."
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Create separate warehouses for each workload.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-82",
+    "number": 82,
+    "sourcePage": 83,
+    "domainId": "performance",
+    "prompt": "A reporting dashboard uses a dedicated warehouse that auto-suspends after five minutes of idle time. Similar queries run sporadically with gaps exceeding five minutes. Users notice the first query after suspension takes significantly longer than subsequent queries while the warehouse stays active. How should query performance be improved?",
+    "options": [
+      "Set the MIN_CLUSTER_COUNT equal to the MAX_CLUSTER_COUNT.",
+      "Increase the warehouse size to X-Large.",
+      "Use ALTER WAREHOUSE to increase the STATEMENT_TIMEOUT_IN_SECONDS.",
+      "Increase the AUTO_SUSPEND setting."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Increase the AUTO_SUSPEND setting.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-83",
+    "number": 83,
+    "sourcePage": 84,
+    "domainId": "architecture",
+    "prompt": "Which virtual warehouse parameters are used to configure how clusters will run in Maximized mode or Auto-scale mode? (Choose two.)",
+    "options": [
+      "SET WAREHOUSE_SIZE",
+      "SET MIN_CLUSTER_COUNT",
+      "SET MAX_CONCURRENCY_LEVEL",
+      "SET WAREHOUSE_TYPE",
+      "SET MAX_CLUSTER_COUNT"
+    ],
+    "correctAnswers": [
+      1,
+      4
+    ],
+    "answerLabels": [
+      "B",
+      "E"
+    ],
+    "explanation": "PDF 给出的参考答案是 B, E：B. SET MIN_CLUSTER_COUNT；E. SET MAX_CLUSTER_COUNT。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-84",
+    "number": 84,
+    "sourcePage": 85,
+    "domainId": "performance",
+    "prompt": "The first query run on virtual warehouse takes longer to run than the next run of the same query an hour later. What causes this to happen?",
+    "options": [
+      "The network connection is slower due to high traffic.",
+      "The warehouse copies all data from storage before executing the first query.",
+      "The first query was compiled by the database, the second query used a pre-compiled version.",
+      "The warehouse was suspended initially, the second query used cached data."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. The warehouse was suspended initially, the second query used cached data.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-85",
+    "number": 85,
+    "sourcePage": 86,
+    "domainId": "collaboration",
+    "prompt": "A user needs to implement Slowly Changing Dimensions (SCD Type 2) to track historical changes. Which action will accomplish this?",
+    "options": [
+      "Enable table CHANGE_TRACKING on the dimension and use a scheduled task to run a MERGE that reads only changed rows.",
+      "Use Time Travel with periodic clones to snapshot the dimension and reconstruct history, using views when needed.",
+      "Use Snowpipe for auto-ingest and materialized views to propagate changes into the dimension table for versioning.",
+      "Use streams on the source or staging table with tasks that run a MERGE to expire current rows and insert new versioned rows with effective dates."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Use streams on the source or staging table with tasks that run a MERGE to expire current rows and insert new versioned rows with effective dates.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-86",
+    "number": 86,
+    "sourcePage": 87,
+    "domainId": "performance",
+    "prompt": "What is the initial status of a cloned task?",
+    "options": [
+      "Started",
+      "Suspended",
+      "Unassigned",
+      "Same as the parent task"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Suspended。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-87",
+    "number": 87,
+    "sourcePage": 88,
+    "domainId": "performance",
+    "prompt": "A user runs a query on a large table using a Medium virtual warehouse. The same query is run on the same table by a different user using a different warehouse. Which caches will be used?",
+    "options": [
+      "Local disk cache and metadata cache",
+      "Query result cache and warehouse cache",
+      "Warehouse cache and metadata cache",
+      "Metadata cache and query result cache"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Metadata cache and query result cache。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-88",
+    "number": 88,
+    "sourcePage": 89,
+    "domainId": "performance",
+    "prompt": "Which will enable temporary scaling for queries that contain complex computations that may consume many credits?",
+    "options": [
+      "Search optimization service",
+      "A virtual warehouse scaling policy",
+      "Query acceleration service",
+      "A multi-cluster virtual warehouse"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Query acceleration service。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-89",
+    "number": 89,
+    "sourcePage": 90,
+    "domainId": "performance",
+    "prompt": "This query was run: select count(*) from ORDERS; Where will the results come from?",
+    "options": [
+      "Metadata cache",
+      "Query result cache",
+      "A full scan of the ORDERS table",
+      "The warehouse summary tables"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Metadata cache。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-90",
+    "number": 90,
+    "sourcePage": 91,
+    "domainId": "architecture",
+    "prompt": "A dashboard query is running much slower than expected. The Query Profile shows a join operator consuming 70% of the total execution time and producing 1,000 times more rows than its input tables. What is causing this issue?",
+    "options": [
+      "The query is queuing because the warehouse has too many concurrent queries.",
+      "The joined tables are not benefiting from efficient micro-partition pruning.",
+      "The query is generating a cartesian product due to a missing or incorrect ON clause condition.",
+      "The query is spilling data to remote storage because the warehouse is too small."
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. The query is generating a cartesian product due to a missing or incorrect ON clause condition.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-91",
+    "number": 91,
+    "sourcePage": 92,
+    "domainId": "architecture",
+    "prompt": "Which metadata does Snowflake store about the rows in a micro-partition? (Choose two.)",
+    "options": [
+      "The range of values for each column",
+      "The average values for each column",
+      "The number of distinct values",
+      "The total number of values",
+      "The number of times each column has been queried"
+    ],
+    "correctAnswers": [
+      0,
+      2
+    ],
+    "answerLabels": [
+      "A",
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, C：A. The range of values for each column；C. The number of distinct values。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-92",
+    "number": 92,
+    "sourcePage": 93,
+    "domainId": "performance",
+    "prompt": "When will queries benefit from clustering? (Choose two.)",
+    "options": [
+      "When queries filter or sort on the clustering key",
+      "When queries use the SELECT DISTINCT command to remove duplicate rows",
+      "When queries use random sampling to explore the data set",
+      "When queries use the ORDER BY or GROUP BY parameter on the clustering key",
+      "When clustering keys are applied to columns that are not used in filters or joins"
+    ],
+    "correctAnswers": [
+      0,
+      3
+    ],
+    "answerLabels": [
+      "A",
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, D：A. When queries filter or sort on the clustering key；D. When queries use the ORDER BY or GROUP BY parameter on the clustering key。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-93",
+    "number": 93,
+    "sourcePage": 94,
+    "domainId": "architecture",
+    "prompt": "How does the search optimization service use the search access path?",
+    "options": [
+      "By generating a real-time index for all data in a database",
+      "By creating an up-to-date catalog of all tables in a database",
+      "By listing all queries that have been executed on the table data",
+      "By identifying where column-level values are in each micro-partition"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. By identifying where column-level values are in each micro-partition。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-94",
+    "number": 94,
+    "sourcePage": 95,
+    "domainId": "performance",
+    "prompt": "What can be shared when the SECURE_OBJECTS_ONLY property is set to = FALSE?",
+    "options": [
+      "A view",
+      "A stored procedure",
+      "Storage integration access",
+      "A User-Defined Function (UDF)"
+    ],
+    "correctAnswers": [
+      0,
+      1,
+      3
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 A, B, D：A. A view；B. A stored procedure；D. A User-Defined Function (UDF)。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-95",
+    "number": 95,
+    "sourcePage": 96,
+    "domainId": "collaboration",
+    "prompt": "What tasks can a data consumer perform using third-party data sets in the Snowflake Marketplace?",
+    "options": [
+      "Republish listings from the data provider.",
+      "Integrate Marketplace data with the Snowflake environment.",
+      "Modify the data structures and schemas in the provider’s data set.",
+      "Export Marketplace data sets to local files for offline analysis."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Integrate Marketplace data with the Snowflake environment.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-96",
+    "number": 96,
+    "sourcePage": 97,
+    "domainId": "loading",
+    "prompt": "A Snowflake user needs to share a data set and wants it to be available to any Snowflake account that resides in the same cloud region. What is the recommended way to do this?",
+    "options": [
+      "Use a public listing.",
+      "Use a direct share.",
+      "Use a Data Exchange.",
+      "Use an external stage."
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Use a public listing.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-97",
+    "number": 97,
+    "sourcePage": 98,
+    "domainId": "performance",
+    "prompt": "What is the MOST efficient method to share a subset of data from a table with a consumer account?",
+    "options": [
+      "Create a secure User-Defined Function (UDF).",
+      "Use a dynamic table.",
+      "Create an external table.",
+      "Create a secure view."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Create a secure view.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-98",
+    "number": 98,
+    "sourcePage": 99,
+    "domainId": "governance",
+    "prompt": "What steps are required when creating an external share that includes a table from Database A and a view from Database B?",
+    "options": [
+      "Create the share as an account-level object and grant USAGE on both databases.",
+      "Create the share as a database-level object and define the share in the database that contains majority of the objects.",
+      "Create the share as a schema-level object and ensure all the referenced databases are transient.",
+      "Create the share as an organization-level object and use the ACCOUNTADMIN role to define the share."
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Create the share as an account-level object and grant USAGE on both databases.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-99",
+    "number": 99,
+    "sourcePage": 100,
+    "domainId": "collaboration",
+    "prompt": "What can a data consumer do with a Snowflake listing?",
+    "options": [
+      "Publish the listing.",
+      "Create another listing from the shared listing.",
+      "Establish security parameters for listing access.",
+      "Request a copy of the data set used to create the listing."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Request a copy of the data set used to create the listing.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-100",
+    "number": 100,
+    "sourcePage": 101,
+    "domainId": "collaboration",
+    "prompt": "There are two Snowflake accounts in the same cloud provider region: one is production and the other is non-production. How can data be easily transferred from the production account to the non-production account?",
+    "options": [
+      "Clone the data from the production account to the non-production account.",
+      "Create a data share from the production account to the non-production account.",
+      "Create a subscription in the production account and have it published to the non-production account.",
+      "Create a reader account using the production account and link the reader account to the non-production account."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Create a data share from the production account to the non-production account.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-101",
+    "number": 101,
+    "sourcePage": 102,
+    "domainId": "architecture",
+    "prompt": "A company stores customer and plan information in tables. The business team wants to ask questions like “Which plan has the most customers leaving this month?” and get answers right away without writing any SQL. Which Snowflake Cortex feature should be used?",
+    "options": [
+      "Cortex Analyst",
+      "Cortex Search",
+      "AI_PARSE_DOCUMENT",
+      "Cortex Fine-tuning"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Cortex Analyst。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-102",
+    "number": 102,
+    "sourcePage": 103,
+    "domainId": "architecture",
+    "prompt": "A Snowflake Practitioner wants to generate insights from customer data using an LLM directly within Snowflake without building or deploying separate models. Which feature should be used?",
+    "options": [
+      "Snowpark ML",
+      "Streamlit in Snowflake",
+      "Snowflake Cortex",
+      "Snowflake Marketplace"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. Snowflake Cortex。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-103",
+    "number": 103,
+    "sourcePage": 104,
+    "domainId": "architecture",
+    "prompt": "A company has multiple business units that need data isolation but shared administrative oversight. Which solution will meet this requirement?",
+    "options": [
+      "Create separate Snowflake accounts for each business unit.",
+      "Create a single database with separate schemas for each business unit.",
+      "Create separate databases within one account assigned to a business unit.",
+      "Create separate virtual warehouses for each business unit and share databases and schemas."
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. Create separate Snowflake accounts for each business unit.。讨论区解析：Data isolation — each business unit's data is separateShared administrative oversight — one team manages everything Creating separate databases within one Snowflake account satisfies both perfectly:",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-104",
+    "number": 104,
+    "sourcePage": 105,
+    "domainId": "collaboration",
+    "prompt": "A large enterprise requires a disaster recovery solution that ensures all critical databases and account-level objects can be quickly redirected to a secondary region that is hosted on a different cloud provider. Which solution will enable synchronized cross-cloud and cross-region replication to support this level of redundancy?",
+    "options": [
+      "Snowgrid",
+      "Data Clean Rooms",
+      "Cloning to an external stage",
+      "Replication and failover groups"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Replication and failover groups。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-105",
+    "number": 105,
+    "sourcePage": 106,
+    "domainId": "governance",
+    "prompt": "A masking policy named SSN_MASK is applied to the SSN column in the EMPLOYEE table. A user account has been assigned the primary role of DEVELOPER. This policy definition has been set: The HR_MGR role has been granted to the DEVELOPER role. The DEVELOPER role runs this statement: SELECT SSN from EMPLOYEE; Which results will Snowflake return?",
+    "options": [
+      "SSN values partially masked as ‘XXXXX-XX-’ plus the last four digits",
+      "NULL",
+      "Unmasked SSN values",
+      "SHA2 hash of the original SSN values"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. SHA2 hash of the original SSN values。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-106",
+    "number": 106,
+    "sourcePage": 107,
+    "domainId": "governance",
+    "prompt": "Why does Snowflake recommend encrypting the private key when automation tools can use an unencrypted key?",
+    "options": [
+      "Encrypting the private key improves query performance by reducing authentication latency.",
+      "Encrypting the private key allows Snowflake to validate the key rotation interval automatically.",
+      "Encrypting the private key is required because Snowflake-generated keys need encryption to integrate with the platform's security framework.",
+      "Encrypting the private key prevents unauthorized use if someone gains access to the key file."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Encrypting the private key prevents unauthorized use if someone gains access to the key file.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-107",
+    "number": 107,
+    "sourcePage": 108,
+    "domainId": "architecture",
+    "prompt": "A user wants to change the configuration settings in the Snowflake Visual Studio Code (VS Code) extension without using the command line. Which file should they use?",
+    "options": [
+      "settings.joon",
+      "connections.toml",
+      "connectconfig. json",
+      "connections.config"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. connections.toml。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-108",
+    "number": 108,
+    "sourcePage": 109,
+    "domainId": "governance",
+    "prompt": "A user is trying to determine why a data loading script that uses username/password authentication keeps failing with authentication errors. The service account has the correct permissions. How should this be fixed?",
+    "options": [
+      "Add Multi-Factor Authentication (MFA) to the service account.",
+      "Switch to key-pair authentication.",
+      "Increase password complexity requirements.",
+      "Run the script manually to enter MFA codes."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Switch to key-pair authentication.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-109",
+    "number": 109,
+    "sourcePage": 110,
+    "domainId": "loading",
+    "prompt": "A report runs on a table every 8 hours. New data is loaded to the table every 30 days. The query that ran immediately after the latest data load took 5 minutes to complete, while the next several executions completed in under 30 seconds. When will the query execution begin to slow down?",
+    "options": [
+      "8 hours",
+      "24 hours",
+      "30 days",
+      "31 days"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. 30 days。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-110",
+    "number": 110,
+    "sourcePage": 111,
+    "domainId": "performance",
+    "prompt": "Which field in ACCOUNT_USAGE.QUERY_HISTORY view reflects the time a query spends waiting for resources due to concurrency?",
+    "options": [
+      "QUEUED_OVERLOAD_TIME",
+      "QUEUED_REPAIR_TIME",
+      "QUEUED_PROVISIONING_TIME",
+      "TRANSACTION_BLOCKED_TIME"
+    ],
+    "correctAnswers": [
+      0
+    ],
+    "answerLabels": [
+      "A"
+    ],
+    "explanation": "PDF 给出的参考答案是 A：A. QUEUED_OVERLOAD_TIME。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-111",
+    "number": 111,
+    "sourcePage": 112,
+    "domainId": "performance",
+    "prompt": "A warehouse is configured with AUTO_SUSPEND = 1800. A daily report is run in the morning and takes around 9 minutes to complete. The report is run again 10 minutes later and completes in 30 seconds. The report is not run overnight. Why does the query run faster the second time?",
+    "options": [
+      "The query structure caused the optimizer to choose different join sequences.",
+      "The warehouse cache retained the data from the first run.",
+      "The query results stored from the first run are removed.",
+      "The warehouse optimizes subsequent queries based on the performance of the first run."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. The warehouse cache retained the data from the first run.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-112",
+    "number": 112,
+    "sourcePage": 113,
+    "domainId": "performance",
+    "prompt": "Which object type creates a data object that collects information from two tables without implementing manual tracking of data dependencies through transformations?",
+    "options": [
+      "Materialized view",
+      "Stream",
+      "Transient table",
+      "Dynamic table"
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Dynamic table。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-113",
+    "number": 113,
+    "sourcePage": 114,
+    "domainId": "governance",
+    "prompt": "A secure view that references objects from multiple databases within the same account needs to be shared. Which database-level privilege must be granted to the share to ensure data consumers can query the view and access the necessary underlying data?",
+    "options": [
+      "USAGE",
+      "REFEREN С E_USAGE",
+      "SELECT",
+      "CREATE SHARE"
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. REFEREN С E_USAGE。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-114",
+    "number": 114,
+    "sourcePage": 115,
+    "domainId": "collaboration",
+    "prompt": "A company wants to offer a preview of a small portion of a large data set on the Marketplace for a short time, to encourage subscriptions. Which feature supports this requirement?",
+    "options": [
+      "A private Data Exchange with a time-limited membership",
+      "A shared materialized view with an expiration date",
+      "A limited trial listing",
+      "A reader account"
+    ],
+    "correctAnswers": [
+      2
+    ],
+    "answerLabels": [
+      "C"
+    ],
+    "explanation": "PDF 给出的参考答案是 C：C. A limited trial listing。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-115",
+    "number": 115,
+    "sourcePage": 116,
+    "domainId": "collaboration",
+    "prompt": "A user is creating a free private listing to share data with partner organizations. They have created the listing, added data products, and accepted the Snowflake Provider and Consumer Terms. Which step is required prior to publishing the listing?",
+    "options": [
+      "Add the cloud providers that will host and publish the listing.",
+      "Add any featured objects to the listing's data dictionary.",
+      "Add a list of SQL examples to the “Quick Start” section.",
+      "Add the organization and account names for the consumers to the ‘Who can access” section."
+    ],
+    "correctAnswers": [
+      3
+    ],
+    "answerLabels": [
+      "D"
+    ],
+    "explanation": "PDF 给出的参考答案是 D：D. Add the organization and account names for the consumers to the ‘Who can access” section.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  },
+  {
+    "id": "pdf-116",
+    "number": 116,
+    "sourcePage": 117,
+    "domainId": "collaboration",
+    "prompt": "A data provider shares a database containing 5 TB of data with three consumer accounts. Each consumer creates a database from the share and queries the imported data using their own virtual warehouses. Will the consumers incur costs for accessing this imported data?",
+    "options": [
+      "Consumers will incur a one-time data transfer fee plus ongoing compute charges.",
+      "Consumers will incur charges for the compute resources used to query the imported data.",
+      "Consumers will not incur any charges for this access because all costs are absorbed by the provider.",
+      "Consumers will incur both storage charges and compute charges because the 5 ТВ of data is replicated to their accounts."
+    ],
+    "correctAnswers": [
+      1
+    ],
+    "answerLabels": [
+      "B"
+    ],
+    "explanation": "PDF 给出的参考答案是 B：B. Consumers will incur charges for the compute resources used to query the imported data.。该题用于检验对相关 Snowflake 功能边界和适用场景的理解。",
+    "source": "SnowPro Core COF-C03_en_with_discussion.pdf"
+  }
+]
