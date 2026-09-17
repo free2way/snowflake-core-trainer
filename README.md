@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Snowpath — SnowPro Core COF-C03 备考工作台
 
-# Run and deploy your AI Studio app
+面向 2026 年 SnowPro Core（COF-C03）的中文学习应用。内容已从旧版 COF-C02 的六域结构重编为 COF-C03 的五个考试域，并加入 Cortex、Iceberg、Snowpark、动态表、数据治理、成本管理与 Data Clean Rooms 等新版主题。
 
-This contains everything you need to run your app locally.
+## 本地运行
 
-View your app in AI Studio: https://ai.studio/apps/drive/1duePiQ1nLOu2lMWfO4NRh1UMJM7SuMVC
+```bash
+npm install
+npm run dev
+```
 
-## Run Locally
+访问 `http://localhost:3000`。
 
-**Prerequisites:**  Node.js
+默认登录信息：
 
+- 用户名：`admin`
+- 密码：`admin1234`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+生产环境可通过 `APP_USERNAME` 与 `APP_PASSWORD` 环境变量覆盖默认凭据。
+
+## 验证
+
+```bash
+npm run typecheck
+npm run build
+```
+
+学习进度保存在浏览器 Local Storage 中，登录会话使用 HttpOnly Cookie。
