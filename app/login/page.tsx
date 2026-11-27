@@ -27,7 +27,8 @@ export default function LoginPage() {
       setLoading(false);
       return;
     }
-    router.push('/');
+    const next = new URLSearchParams(window.location.search).get('next');
+    router.replace(next && /^\/labs(?:\?lab=[a-z0-9-]+)?$/.test(next) ? next : '/');
     router.refresh();
   }
 

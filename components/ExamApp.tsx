@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import {
   ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, ChevronRight, Circle,
   Clock3, Code2, Copy, ExternalLink, FlaskConical, Gauge, LayoutDashboard, Library,
@@ -77,6 +78,9 @@ export default function ExamApp() {
           <button className={view === 'bank' ? 'nav-item active' : 'nav-item'} onClick={() => { setView('bank'); setNavOpen(false); }}>
             <Library size={17} /><span>模拟题库</span><em>116</em>
           </button>
+          <Link href="/labs" className="nav-item snow-labs-entry">
+            <FlaskConical size={17} aria-hidden /><span>SNOW LABS</span>
+          </Link>
 
           <p className="nav-label domain-label">考试域</p>
           {DOMAINS.map((domain) => {
